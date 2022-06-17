@@ -4,9 +4,35 @@ class Repository {
   late final DataSource dataSource;
   Repository({required this.dataSource});
 
-  Future fetchUserFromAPI() async {
+  Future fetchDataFromAPI() async {
     try {
-      dataSource.fetchDataFromAPI();
-    } catch (e) {}
+      await dataSource.fetchDataFromAPI();
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future fetchDataFromLocal() async {
+    try {
+      await fetchDataFromLocal();
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future sendDataToAPI() async {
+    try {
+      await sendDataToAPI();
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future sendDataToLocal() async {
+    try {
+      await sendDataToLocal();
+    } catch (e) {
+      rethrow;
+    }
   }
 }
