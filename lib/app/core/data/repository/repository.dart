@@ -14,7 +14,7 @@ class Repository {
 
   Future fetchDataFromLocal() async {
     try {
-      await fetchDataFromLocal();
+      await dataSource.fetchDataFromLocalData();
     } catch (e) {
       rethrow;
     }
@@ -22,7 +22,7 @@ class Repository {
 
   Future sendDataToAPI() async {
     try {
-      await sendDataToAPI();
+      await dataSource.sendDataToAPI();
     } catch (e) {
       rethrow;
     }
@@ -30,7 +30,7 @@ class Repository {
 
   Future sendDataToLocal() async {
     try {
-      await sendDataToLocal();
+      await dataSource.sendDataToLocalData();
     } catch (e) {
       rethrow;
     }
